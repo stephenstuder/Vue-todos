@@ -1,6 +1,3 @@
 module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset"],
-  devServer: {
-    proxy: "http:backend.test/",
-  },
+    presets: ["@vue/cli-plugin-babel/preset"]
 };

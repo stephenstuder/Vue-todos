@@ -1,4 +1,6 @@
-// vue.config.js
-module.exports = {
-    publicPath: '/Vue-todos/'
-}
+// module.exports = {
+//   "publicPath": "/Vue-todos/",
+//   "transpileDependencies": [
+//     "vuetify"
+//   ]
+// }

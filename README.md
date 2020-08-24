@@ -1,14 +1,18 @@
-<img src="./src/assets/vue-screenshot.JPG" alt="html image" width="1000"/>
+<img src="./src/assets/vue-screenshot-v2.JPG" alt="html image" width="1000"/>
 https://stephenstuder.com/Vue-todos/#/
 
 # Vue Todo List CRUD app
 This is a Vue todo list app that uses axios and json placeholder to showcase a todolist. 
 
 ## Future Improvements
-- Use a material framework such as Vuetify or Buefy to make it more visually pleasing
+- [x] Use a material framework such as Vuetify or Buefy to make it more visually pleasing
 - Connect to a backend so that data persists, good chance to try out Deno
-- Add some animation for add and page load
+- [x] Add some animation for add and page load
 - Add login so that people can create their own account
+- Basic analytics (total todo's, clear all, completed todo's)
+- Drag and drop 
+- Priority setter
+- Dates
 
 ## Project setup
 ```

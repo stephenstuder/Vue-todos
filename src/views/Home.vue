@@ -1,8 +1,10 @@
 <template>
-  <div id="app" class="d-flex flex-column">
+  <div id="app" class="d-flex flex-column justify-around bg-grey">
     <Header />
-    <AddTodo v-on:add-todo="addTodo" />
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    <div class>
+      <AddTodo v-on:add-todo="addTodo" />
+      <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    </div>
   </div>
 </template>
 
@@ -30,7 +32,8 @@ export default {
             (this.todos = this.todos.filter((todo) => todo.id !== id)), res
           );
         })
-        .catch((err) => console.log(err));
+        /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
+        .catch((err) => console.error(err));
     },
     addTodo(newTodo) {
       const { title, completed } = newTodo;
@@ -40,14 +43,16 @@ export default {
           completed,
         })
         .then((res) => (this.todos = [...this.todos, res.data]))
-        .catch((err) => console.log(err));
+        /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
+        .catch((err) => console.error(err));
     },
   },
   created() {
     axios
       .get("https://jsonplaceholder.typicode.com/todos?_limit=5")
       .then((res) => (this.todos = res.data))
-      .catch((err) => console.log(err));
+      /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
+      .catch((err) => console.error(err));
   },
 };
 </script>
@@ -57,6 +62,10 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.bg-grey {
+  background-color: #343434;
+  min-height: 100vh;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;

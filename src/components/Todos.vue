@@ -8,25 +8,17 @@
 <template>
   <v-row align="center">
     <v-card class="mx-auto" width="800" outlined>
-      <v-list
-        :disabled="disabled"
-        :dense="dense"
-        :two-line="twoLine"
-        :three-line="threeLine"
-        :shaped="shaped"
-        :flat="flat"
-        :subheader="subheader"
-        :sub-group="subGroup"
-        :nav="nav"
-        :avatar="avatar"
-        :rounded="rounded"
-      >
-        <v-subheader>TODO LIST</v-subheader>
-        <v-list-item-group v-model="item" color="primary">
-          <v-list-item v-for="(todo, i)  in todos" :key="i" :inactive="inactive">
-            <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
-          </v-list-item>
-        </v-list-item-group>
+      <v-subheader>TODO LIST</v-subheader>
+      <v-list class="list-group">
+        <v-slide-y-transition class="py-0" group tag="v-list">
+          <TodoItem
+            class="list-group-item px-2 py-3"
+            v-for="(todo, i) in todos"
+            :key="i"
+            v-bind:todo="todo"
+            v-on:del-todo="$emit('del-todo', todo.id)"
+          />
+        </v-slide-y-transition>
       </v-list>
     </v-card>
   </v-row>
@@ -42,4 +34,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+</style>

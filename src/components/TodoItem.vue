@@ -1,11 +1,11 @@
 <template>
-  <div class="todo-item" v-bind:class="{'is-complete':todo.completed}">
-    <p>
+  <v-list-item-content class="todo-item" v-bind:class="{'is-complete':todo.completed}">
+    <v-list-item-title class>
       <input type="checkbox" v-on:change="markComplete" />
       {{todo.title}}
       <button @click="$emit('del-todo', todo.id)" class="del">x</button>
-    </p>
-  </div>
+    </v-list-item-title>
+  </v-list-item-content>
 </template>
 
 <script>
@@ -22,8 +22,8 @@ export default {
 
 <style scope>
 .todo-item {
-  background: #f4f4f4;
   padding: 10px;
+  width: 100%;
   border-bottom: 1px #ccc dotted;
 }
 .is-complete {

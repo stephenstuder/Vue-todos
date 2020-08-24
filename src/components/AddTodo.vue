@@ -1,10 +1,17 @@
 <template>
-  <div>
-    <form @submit="addTodo">
-      <input type="text" v-model="title" name="title" placeholder="Add Todo..." />
-      <input type="submit" value="submit" />
+  <v-card class="mx-auto my-4 px-3" width="800" outlined>
+    <form class="d-flex align-center" @submit="addTodo">
+      <v-text-field
+        class="mr-3"
+        v-model="title"
+        :counter="50"
+        :error-messages="errors"
+        label="Add Todo..."
+        required
+      ></v-text-field>
+      <v-btn type="submit" value="submit" class="mr-4 primary">submit</v-btn>
     </form>
-  </div>
+  </v-card>
 </template>
 
 <script>
@@ -31,14 +38,4 @@ export default {
 </script>
 
 <style scoped>
-form {
-  display: flex;
-}
-input[type="text"] {
-  flex: 10;
-  padding: 5px;
-}
-input[type="submit"] {
-  flex: 2;
-}
 </style>

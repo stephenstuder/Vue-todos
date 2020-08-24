@@ -3,7 +3,9 @@
     <v-list-item-title class="p-3">
       <input type="checkbox" v-on:change="markComplete" />
       {{todo.title}}
-      <button @click="$emit('del-todo', todo.id)" class="del">x</button>
+      <button @click="$emit('del-todo', todo.id)" class="del">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
     </v-list-item-title>
   </v-list-item-content>
 </template>
@@ -30,11 +32,9 @@ export default {
   text-decoration: line-through;
 }
 .del {
-  background: red;
-  color: #fff;
+  color: #000;
   border: none;
   padding: 5px 9px;
-  border-radius: 50%;
   cursor: pointer;
   float: right;
 }

@@ -1,11 +1,11 @@
 <template>
-  <header class="header">
+  <v-top-navigation class="header">
     <h1>TodoList</h1>
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+      <v-btn text small to="/">Home</v-btn>
+      <v-btn text small to="/about">About</v-btn>
     </div>
-  </header>
+  </v-top-navigation>
 </template>
 
 <script>

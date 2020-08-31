@@ -1,13 +1,6 @@
-<!-- <template>
-  <div>
-    <div v-for="todo in todos" v-bind:key="todo.id">
-      <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
-    </div>
-  </div>
-</template> -->
 <template>
   <v-row align="center">
-    <v-card class="mx-auto" width="800" outlined>
+    <v-card class="mx-auto" min-width="600" outlined>
       <v-subheader>TODO LIST</v-subheader>
       <v-list class="list-group">
         <v-slide-y-transition class="py-0" group tag="v-list">

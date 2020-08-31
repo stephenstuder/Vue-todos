@@ -1,10 +1,12 @@
 <template>
-  <v-card class="mx-auto my-4 px-3" width="800" outlined>
-    <form class="d-flex align-center" @submit="addTodo">
-      <v-text-field class="mr-3" v-model="title" :counter="50" label="Add Todo..." required></v-text-field>
-      <v-btn type="submit" value="submit" class="mr-4 primary">Add Todo</v-btn>
-    </form>
-  </v-card>
+  <v-row align="center">
+    <v-card class="mx-auto my-4 px-3" min-width="600" outlined>
+      <form class="d-flex align-center" @submit="addTodo">
+        <v-text-field class="mr-3" v-model="title" :counter="50" label="Add Todo..." required></v-text-field>
+        <v-btn type="submit" value="submit" class="ml-2 primary">Add Todo</v-btn>
+      </form>
+    </v-card>
+  </v-row>
 </template>
 
 <script>

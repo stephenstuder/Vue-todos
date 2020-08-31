@@ -1,10 +1,14 @@
 <template>
   <div id="app" class="d-flex flex-column justify-around bg-grey">
     <Header />
-    <div class>
-      <AddTodo v-on:add-todo="addTodo" />
-      <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
-    </div>
+    <v-container class>
+      <v-row>
+        <v-col cols="12">
+          <AddTodo v-on:add-todo="addTodo" />
+          <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 

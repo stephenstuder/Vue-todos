@@ -1,6 +1,6 @@
 <template>
   <v-top-navigation class="header">
-    <h1>TodoList</h1>
+    <h1>Todo List</h1>
     <div id="nav">
       <v-btn text small to="/">Home</v-btn>
       <v-btn text small to="/about">About</v-btn>

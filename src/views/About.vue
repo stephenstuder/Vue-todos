@@ -26,7 +26,7 @@ export default {
 </script>
 <style>
 .bg-grey {
-  background-color: #343434;
+  background-color: #5b5b5b;
   color: #fff;
   min-height: 100vh;
 }

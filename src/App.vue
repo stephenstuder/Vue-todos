@@ -14,7 +14,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main class="bg-grey">
+    <v-main>
       <router-view />
     </v-main>
   </v-app>

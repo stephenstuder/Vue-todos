@@ -1,6 +1,6 @@
 <template>
-  <v-row align="center">
-    <v-card class="mx-auto" min-width="600" outlined>
+  <v-row justify="center">
+    <v-card outlined>
       <v-subheader>TODO LIST</v-subheader>
       <v-list class="list-group">
         <v-slide-y-transition class="py-0" group tag="v-list">

@@ -1,9 +1,9 @@
 <template>
-  <v-row align="center">
-    <v-card class="mx-auto my-4 px-3" min-width="600" outlined>
-      <form class="d-flex align-center" @submit="addTodo">
-        <v-text-field class="mr-3" v-model="title" :counter="50" label="Add Todo..." required></v-text-field>
-        <v-btn type="submit" value="submit" class="ml-2 primary">Add Todo</v-btn>
+  <v-row justify="center">
+    <v-card class="my-4 px-3 py-3" width="503px" outlined>
+      <form class="d-flex justify-center flex-column" @submit="addTodo">
+        <v-text-field class v-model="title" :counter="50" label="Add Todo..." required></v-text-field>
+        <v-btn type="submit" value="submit" width="100%" class="primary">Add Todo</v-btn>
       </form>
     </v-card>
   </v-row>

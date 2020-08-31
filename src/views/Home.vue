@@ -1,7 +1,6 @@
 <template>
-  <div id="app" class="d-flex flex-column justify-around bg-grey">
-    <Header />
-    <v-container class>
+  <div id="app">
+    <v-container fluid class="d-flex flex-column justify-around bg-grey">
       <v-row>
         <v-col cols="12">
           <AddTodo v-on:add-todo="addTodo" />

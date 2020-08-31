@@ -1,6 +1,6 @@
-// module.exports = {
-//   "publicPath": "/Vue-todos/",
-//   "transpileDependencies": [
-//     "vuetify"
-//   ]
-// }
+module.exports = {
+  "publicPath": "/Vue-todos/",
+  "transpileDependencies": [
+    "vuetify"
+  ]
+}

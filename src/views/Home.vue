@@ -40,6 +40,7 @@ export default {
     },
     addTodo(newTodo) {
       const { title, completed } = newTodo;
+      localStorage.setItem("todo", [title, completed]);
       axios
         .post("https://jsonplaceholder.typicode.com/todos", {
           title,
